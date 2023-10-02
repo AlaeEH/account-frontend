@@ -1,1 +1,30 @@
-<div>jkasdfjksdnafkdnjsa</div>
+<div class='container'>
+    <div class='card'>
+        <h2>Login</h2>
+        <app-input
+                placeholder='Username'
+                [(ngModel)]='username'
+                (input)='setUsername($event)'
+        />
+
+        <app-input
+                type='password'
+                placeholder='Password'
+                [(ngModel)]='password'
+                (input)='setPassword($event)'
+        />
+
+        <div class='registerContainer'>
+            <span>Not yet a member?</span>
+            <a class='link'>Register now!</a>
+        </div>
+
+        <app-button
+                type='submit'
+                value='Login'
+                (click)='login()'
+        />
+
+        <app-error-message errorMessage='Username/Password incorrect.' *ngIf='error'/>
+    </div>
+</div>

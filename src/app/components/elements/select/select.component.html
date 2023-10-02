@@ -1,0 +1,3 @@
+<select class='input' [(ngModel)]="selectedOption">
+    <option *ngFor="let option of options" [value]="option" (change)='selectOption($event)'>{{ option }}</option>
+</select>

@@ -1,7 +1,19 @@
 <div class='navbar'>
-    <h2 [routerLink]='PAGE_PATH'>
+    <h2 class='title' [routerLink]='PAGE_PATH'>
         Hani Finance
     </h2>
-    <a [routerLink]="OVERVIEW_PAGE">Dashboard</a>
-    <a [routerLink]="AUTH_PATH">Login</a>
+    <div class='nav-items'>
+        <a class='nav-item' *ngIf='!authenticated' [routerLink]='AUTH_PATH'>Login</a>
+        <a class='nav-item' *ngIf='authenticated'>
+            {{ getCookie('username') }}
+        </a>
+        <a class='nav-item' *ngIf='authenticated' [routerLink]='OVERVIEW_PAGE'>Dashboard</a>
+        <a
+                class='nav-item'
+                *ngIf='authenticated'
+                (click)='logout()'
+        >
+            Logout
+        </a>
+    </div>
 </div>
