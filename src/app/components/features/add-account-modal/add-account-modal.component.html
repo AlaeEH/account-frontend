@@ -6,7 +6,6 @@
         <app-input (input)='setBalance($event)' placeholder='25.00' type='number'/>
         <app-select
                 [options]='[AccountStatus.ACTIVE, AccountStatus.INACTIVE, AccountStatus.BLOCKED]'
-                [selectedOption]='status'
         />
 
         <div class='buttons'>

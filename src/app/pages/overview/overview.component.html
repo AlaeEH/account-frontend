@@ -1,7 +1,12 @@
 <div class='container'>
     <div class='content'>
-        <app-account-overview [accounts]='accounts'/>
-        <app-button (click)='openModal()' value='Add Account'/>
+        <div class='data'>
+            <app-account-overview [accounts]='accounts'/>
+            <app-button (click)='openModal()' value='Add Account'/>
+
+            <app-account-holder-overview [accountHolders]='accountHolders'/>
+            <app-button (click)='openModal()' value='Add Holder'/>
+        </div>
         <app-add-account-modal *ngIf='accountModal' (onClose)='closeModal()'/>
     </div>
 </div>

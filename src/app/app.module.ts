@@ -14,6 +14,7 @@ import { ErrorMessageComponent } from "./components/elements/error-message/error
 import { AccountOverviewComponent } from './components/features/account-overview/account-overview.component';
 import { AddAccountModalComponent } from './components/features/add-account-modal/add-account-modal.component';
 import { SelectComponent } from './components/elements/select/select.component';
+import { AccountHolderOverviewComponent } from './components/features/account-holder-overview/account-holder-overview.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SelectComponent } from './components/elements/select/select.component';
     ErrorMessageComponent,
     AccountOverviewComponent,
     AddAccountModalComponent,
-    SelectComponent
+    SelectComponent,
+    AccountHolderOverviewComponent
   ],
     imports: [
         BrowserModule,
